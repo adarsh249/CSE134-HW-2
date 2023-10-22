@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
     <title>Adarsh's Portfoilo</title>
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="../assets/favicon.ico">
+    <meta name="description" content="Adarsh Patel's resume and portfolio site.">
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="../images/pfp.jpg">
+        <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav>
+        <nav id="nav_bar">
             <a href="../index.html">Home</a>
             <a href="./contact.html">Contact</a>
             <a href="./experiment.html">Experimental</a>
@@ -17,26 +23,26 @@
     </header>
     <main>
         <h2>My Resume</h2>
-        <button>Resume PDF Version</button>
-        <details>
+        <button id="resume_pdf_button" >Resume PDF Version</button>
+        <details id="education">
             <summary>Education</summary>
-            <section>
-                <p>University of California, San Diego</p>
-                <p>B.S in Computer Science, expected June 2024</p>
-                <p>La Jolla, CA</p>
-                <p>GPA: 3.73</p>
+            <section id="education_UCSD">
+                <p class="school_name">University of California, San Diego</p>
+                <p class="degree_level">B.S in Computer Science, expected June 2024</p>
+                <p class="school_location">La Jolla, CA</p>
+                <p class="school_gpa">GPA: 3.73</p>
             </section>
-            <section>
-                <p>Cypress College</p>
-                <p>A.S. in Computer Science, earned May 2022</p>
-                <p>Cypress, CA</p>
-                <p>GPA: 3.89</p>
+            <section id="education_CC">
+                <p class="school_name">Cypress College</p>
+                <p class="degree_level">A.S. in Computer Science, earned May 2022</p>
+                <p class="school_location">Cypress, CA</p>
+                <p class="school_gpa">GPA: 3.89</p>
             </section>
         </details>
-        <details>
+        <details id="relevant_courses">
             <summary>Relevant Courses</summary>
             <ul>
-                <li><span class="relevant_courses">CSE 135 - Online Database Analytics Applications</span>
+                <li><span class="relevant_courses_title">CSE 135 - Online Database Analytics Applications</span>
                     <ul>
                         <li>Explored HTTP and its appropriate use in site and application delivery.</li>
                         <li>
@@ -54,7 +60,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><span class="relevant_courses">CSE 110 - Software Engineering</span>
+                <li><span class="relevant_courses_title">CSE 110 - Software Engineering</span>
                     <ul>
                         <li>
                             Focused on the software engineering process, using Agile, emphasizing the journey from our randomly
@@ -77,7 +83,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><span class="relevant_courses">CSE 101 - Design and Analysis of Algorithms</span>
+                <li><span class="relevant_courses_title">CSE 101 - Design and Analysis of Algorithms</span>
                     <ul>
                         <li>
                             Design and analysis of efficient algorithims relating to sorting, searching, pattern matching, and graph 
@@ -91,7 +97,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><span class="relevant_courses">CSE 100 - Advanced Data Structures</span>
+                <li><span class="relevant_courses_title">CSE 100 - Advanced Data Structures</span>
                     <ul>
                         <li>
                             Implemented high-performing data structures and supporting algorithms,
@@ -101,7 +107,7 @@
                         <li>Examined theoretical and practical performance analysis of average, best, worst and amortized cases.</li>
                     </ul>
                 </li>
-                <li><span class="relevant_courses">CSE 140L - Digital Systems Labratory</span>
+                <li><span class="relevant_courses_title">CSE 140L - Digital Systems Labratory</span>
                     <ul>
                         <li>
                             Implementation with computer-aided design tools for combinational logic minimization and state machine synthesis.
@@ -113,18 +119,18 @@
                 </li>
             </ul>
         </details>
-        <details>
+        <details id="experience">
             <summary>Experience</summary>
-            <p>Calculus II Supplemental Instruction Leader</p>
-            <p>Cypress College</p>
-            <p>January 2022 - May 2022</p>
-            <ul>
+            <p class="job_title">Calculus II Supplemental Instruction Leader</p>
+            <p class="job_company">Cypress College</p>
+            <p class="job_dates">January 2022 - May 2022</p>
+            <ul class="job_duties">
                 <li>Tutored over 40 students by hosting two two-hour sessions weekly improving test scores by 20%.</li>
                 <li>Created handouts, problems and practice tests to help students broaden their understanding of calculus.</li>
                 <li>Provided support daily through Discord and emails increasing the number of questions asked by students.</li>
             </ul>
         </details>
-        <details>
+        <details id="projects">
             <summary>Projects</summary>
             <h3>Analytics Dashboard | HTML, CSS, Node.js, PHP, MySQL</h3>
             <ul>
@@ -171,7 +177,7 @@
                 </li>
             </ul>
         </details>
-        <details>
+        <details id="technical_skills">
             <summary>Technical Skills</summary>
             <table>
                 <caption>Languages/Frameworks</caption>
@@ -270,7 +276,7 @@
         </details>
     </main>
     <footer>
-        <button>Back to Top</button>
+        <button class="back_to_top_button">Back to Top</button>
         <p>Adarsh Patel &copy;</p>
     </footer>
 </body>

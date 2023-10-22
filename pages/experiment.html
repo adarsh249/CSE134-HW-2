@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <title>Adarsh's Portfoilo</title>
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="../assets/favicon.ico">
+    <meta name="description" content="Adarsh Patel's resume and portfolio site.">
 </head>
 <body>
     <header>
-        <img src="../images/pfp.jpg">
+        <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav>
+        <nav id="nav_bar">
             <a href="../index.html">Home</a>
             <a href="./contact.html">Contact</a>
             <a href="./experiment.html">Experimental</a>
@@ -36,11 +37,90 @@
             id="resume_site_v1_inline"
             title="Version 1 of my resume site before taking CSE 134B."
             src="https://adarsh249.github.io/adarsh-site/"></iframe>
-            
+            <p>Change the width of your page.</p>
+            <picture>
+                <source srcset="../assets/images/hw_1_7.png" media="(orientation:portrait)">
+                <img src="../assets/images/hw_1_5_piggy.png" alt="Image of a computer generated pig">
+            </picture>
+            <p>Drawing a rectangle with the canvas tag below:</p>
+            <canvas id="canvas_rectangle"></canvas>
+            <script>
+                let canvas = document.getElementById("canvas_rectangle");
+                let ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#5749b3";
+                ctx.fillRect(50, 30, 200, 100);
+            </script>
+            <p>The same image below drawn with an svg tag.</p>
+            <svg>
+                <rect x="50" y="30" width="200" height="100" fill="#5749b3"/>
+            </svg>
+            <p>Below is using the video tag.</p> 
+            <video controls width="300">
+                <source src="../assets/videos/minion_video.webm" type="video/webm" />
+                <source src="../assets/videos/minion_video.mp4" type="video/mp4" />
+            </video>
+            <p>Here we use the audio tag in a figure tag with a figure caption tag.</p>
+            <figure>
+                <figcaption>Listen to the minion audio:</figcaption>
+                <audio controls src="../assets/audio/minion_audio.mp3"></audio>
+            </figure>
         </section>
+        <section class="form_tags">
+            <label for="company_select">Choose the best company to work for:</label>
+            <select id="company_select">
+                <optgroup label="Defense Companies">
+                    <option>General Atomics</option>
+                    <option>Northrop Grumman</option>
+                    <option>Raytheon</option>
+                    <option>Lockheed Martin</option>
+                    <option>Boeing</option>
+                </optgroup>
+                <optgroup label="Big Tech" disabled>
+                    <option>Meta</option>
+                    <option>Amazon</option>
+                    <option>Apple</option>
+                    <option>Netflix</option>
+                    <option>Google</option>
+                </optgroup>
+                <optgroup label="Banks">
+                    <option>JPMorgan</option>
+                    <option>Wells Fargo</option>
+                    <option>Bank of America</option>
+                    <option>Citi</option>
+                </optgroup>
+            </select><br>
+            <label for="layoff_choice">Who laid off the most employees?</label>
+            <input list="layoff_companies" id="layoff_choice" name="layoff_choice"/>
+            <datalist id="layoff_companies">
+                <option value="Meta"></option>
+                <option value="Amazon"></option>
+                <option value="Apple"></option>
+                <option value="Netflix"></option>
+                <option value="Google"></option>
+            </datalist>
+            <fieldset>
+                <legend>Choose the company you would most want to work for.</legend>
+                <input type="radio" id="meta" name="company" value="meta"/>
+                <label for="meta">Meta</label>
+                <input type="radio" id="amazon" name="company" value="meta"/>
+                <label for="amazon">Amazon</label>
+                <input type="radio" id="apple" name="company" value="meta"/>
+                <label for="apple">Apple</label>
+                <input type="radio" id="netflix" name="company" value="meta"/>
+                <label for="netflix">Netflix</label>
+                <input type="radio" id="google" name="company" value="meta"/>
+                <label for="google">Google</label>
+            </fieldset>
+        </section>
+        <template id="template_tag">
+            <p>
+                You can't see this in homework 2 because we're not supposed to use JavaScript.
+                And, this tag will be instantiated with JavaScript.
+            </p>
+        </template>
     </main>
     <footer>
-        <button>Back to Top</button>
+        <button class="back_to_top_button">Back to Top</button>
         <p>Adarsh Patel &copy;</p>
     </footer>
 </body>

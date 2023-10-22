@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <title>Adarsh's Portfoilo</title>
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./assets/favicon.ico">
+    <meta name="description" content="Adarsh Patel's resume and portfolio site.">
 </head>
 <body>
     <header>
-        <img src="./images/pfp.jpg">
+        <img src="./assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav>
+        <nav id="nav_bar">
             <a href="./index.html">Home</a>
             <a href="./pages/contact.html">Contact</a>
             <a href="./pages/experiment.html">Experimental</a>
@@ -16,7 +17,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="welcome_section">
             <h2><b>Welcome!</b></h2>
             <p>
                 My name is Adarsh Patel and I am a computer sciece major at the University of
@@ -25,12 +26,12 @@
                 or click on the three buttons below to redirect to more about me.
             </p>
         </section>
-        <section>
+        <section id="external_button_links">
             <button>LinkedIn</button>
             <button>GitHub</button>
             <button>My Resume</button>
         </section>
-        <section>
+        <section id="projects">
             <h2>My Projects</h2>
             <hr>
             <h3>Analytics Dashboard | <em>HTML</em>, <em>CSS</em>, <em>Node.js</em>, <em>PHP</em>, <em>MySQL</em></h3>
@@ -73,7 +74,7 @@
         </section>
     </main>
     <footer>
-        <button>Back to Top</button>
+        <button class="back_to_top_button">Back to Top</button>
         <p>Adarsh Patel &copy;</p>
     </footer>
 </body>
