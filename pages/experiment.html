@@ -9,7 +9,7 @@
     <header>
         <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav id="nav_bar">
+        <nav>
             <a href="../index.html">Home</a>
             <a href="./contact.html">Contact</a>
             <a href="./experiment.html">Experimental</a>
@@ -18,6 +18,32 @@
     </header>
     <main>
         <h2><i>This</i> page is to experiment with my leftover tags.</h2>
+        <section class="extra_credit">
+            <h3>Extra Credit</h3>
+            <ol>
+                <li>
+                    <math>
+                        <mrow>
+                            <mi>E</mi>
+                            <mo>=</mo>
+                            <mi>m</mi>
+                            <msup>
+                                <mi>c</mi>
+                                <mi>2</mi>
+                            </msup>
+                        </mrow>
+                    </math>
+                </li>
+                <li>
+                    It seems as if Chrome and Opera had released Math ML for use back in 2012 and 2009, respectively, but it was 
+                    temporarily removed due to instability with the tag. It seems as if the top browsers have now (years later) fixed this issue and support
+                    Math ML, however, some browsers still do not support it completely, such as Opera.
+                </li>
+                <li>
+                    Check line 6 on each of my HTML pages.
+                </li>
+            </ol>
+        </section>
         <section class="code_tags">
             <h3>HTML Code Related Tags</h3>
             <p>In python, you can print "Hello, World!" by using the line <code>print("Hello, World!")</code></p>
@@ -32,12 +58,12 @@
         </section>
         <section class="visual_tags">
             <h3>HTML Visual Related Tags</h3>
-            <p>This is my resume site before taking this course.</p>
+            <p>This is my resume site before taking this course. (Clearly, not that great).</p>
             <iframe 
             id="resume_site_v1_inline"
             title="Version 1 of my resume site before taking CSE 134B."
             src="https://adarsh249.github.io/adarsh-site/"></iframe>
-            <p>Change the width of your page.</p>
+            <p>Change the width of your page to portrait.</p>
             <picture>
                 <source srcset="../assets/images/hw_1_7.png" media="(orientation:portrait)">
                 <img src="../assets/images/hw_1_5_piggy.png" alt="Image of a computer generated pig">
@@ -54,18 +80,21 @@
             <svg>
                 <rect x="50" y="30" width="200" height="100" fill="#5749b3"/>
             </svg>
-            <p>Below is using the video tag.</p> 
-            <video controls width="300">
-                <source src="../assets/videos/minion_video.webm" type="video/webm" />
-                <source src="../assets/videos/minion_video.mp4" type="video/mp4" />
-            </video>
-            <p>Here we use the audio tag in a figure tag with a figure caption tag.</p>
-            <figure>
-                <figcaption>Listen to the minion audio:</figcaption>
-                <audio controls src="../assets/audio/minion_audio.mp3"></audio>
-            </figure>
+            <div class="minion">
+                <p>Below is using the video tag.</p> 
+                <video controls width="300">
+                    <source src="../assets/videos/minion_video.webm" type="video/webm" />
+                    <source src="../assets/videos/minion_video.mp4" type="video/mp4" />
+                </video>
+                <p>Here we use the audio tag in a figure tag with a figure caption tag.</p>
+                <figure>
+                    <figcaption>Listen to the minion audio:</figcaption>
+                    <audio controls src="../assets/audio/minion_audio.mp3"></audio>
+                </figure>
+            </div>
         </section>
         <section class="form_tags">
+            <h3>Form Related Tags</h3>
             <label for="company_select">Choose the best company to work for:</label>
             <select id="company_select">
                 <optgroup label="Defense Companies">

@@ -14,7 +14,7 @@
     <header>
         <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav id="nav_bar">
+        <nav>
             <a href="../index.html">Home</a>
             <a href="./contact.html">Contact</a>
             <a href="./experiment.html">Experimental</a>
@@ -23,20 +23,21 @@
     </header>
     <main>
         <h2>My Resume</h2>
-        <button id="resume_pdf_button" >Resume PDF Version</button>
+        <a href="../assets/documents/Adarsh Patel Resume.pdf">My Resume (PDF)</a>
         <details id="education">
             <summary>Education</summary>
-            <section id="education_UCSD">
-                <p class="school_name">University of California, San Diego</p>
-                <p class="degree_level">B.S in Computer Science, expected June 2024</p>
-                <p class="school_location">La Jolla, CA</p>
-                <p class="school_gpa">GPA: 3.73</p>
+            <section>
+                <p>University of California, San Diego</p>
+                <p>B.S in Computer Science, expected June 2024</p>
+                <p>La Jolla, CA</p>
+                <p>GPA: 3.73</p>
             </section>
-            <section id="education_CC">
-                <p class="school_name">Cypress College</p>
-                <p class="degree_level">A.S. in Computer Science, earned May 2022</p>
-                <p class="school_location">Cypress, CA</p>
-                <p class="school_gpa">GPA: 3.89</p>
+            <hr>
+            <section>
+                <p>Cypress College</p>
+                <p>A.S. in Computer Science, earned May 2022</p>
+                <p>Cypress, CA</p>
+                <p>GPA: 3.89</p>
             </section>
         </details>
         <details id="relevant_courses">
@@ -121,10 +122,10 @@
         </details>
         <details id="experience">
             <summary>Experience</summary>
-            <p class="job_title">Calculus II Supplemental Instruction Leader</p>
-            <p class="job_company">Cypress College</p>
-            <p class="job_dates">January 2022 - May 2022</p>
-            <ul class="job_duties">
+            <p>Calculus II Supplemental Instruction Leader</p>
+            <p>Cypress College</p>
+            <p>January 2022 - May 2022</p>
+            <ul>
                 <li>Tutored over 40 students by hosting two two-hour sessions weekly improving test scores by 20%.</li>
                 <li>Created handouts, problems and practice tests to help students broaden their understanding of calculus.</li>
                 <li>Provided support daily through Discord and emails increasing the number of questions asked by students.</li>
@@ -154,8 +155,8 @@
             </ul>
             <hr>
             <h3>Origami Fortune Teller | HTML, CSS, JavaScript |
-                <a href="https://github.com/orgs/cse110-sp23-group1/repositories" target="_blank">GitHub</a> | 
-                <a href="https://cse110-sp23-group1.github.io/Origami-Fortune-Teller/" target="_blank">Project Link</a>
+                <a href="https://github.com/orgs/cse110-sp23-group1/repositories">GitHub</a> | 
+                <a href="https://cse110-sp23-group1.github.io/Origami-Fortune-Teller/">Project Link</a>
             </h3>
             <ul>
                 <li>
@@ -179,7 +180,7 @@
         </details>
         <details id="technical_skills">
             <summary>Technical Skills</summary>
-            <table>
+            <table id="languages_frameworks_table">
                 <caption>Languages/Frameworks</caption>
                 <colgroup>
                     <col span="1" class="tools"/>
@@ -234,7 +235,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table>
+            <table id="devtools_table">
                 <caption>Developer Tools</caption>
                 <colgroup>
                     <col span="1" class="tools"/>

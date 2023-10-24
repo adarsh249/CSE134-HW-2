@@ -9,7 +9,7 @@
     <header>
         <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav id="nav_bar">
+        <nav>
             <a href="../index.html">Home</a>
             <a href="./contact.html">Contact</a>
             <a href="./experiment.html">Experimental</a>
@@ -18,11 +18,11 @@
     </header>
     <main>
         <h2>Contact Me!</h2>
-        <form method="POST" id="contact_me_form">
+        <form method="get" id="contact_me_form" action="https://httpbin.org/">
             <label for="full_name">Enter your Name:</label><br>
             <input type="text" name="full_name" id="full_name" required autofocus><br>
             <label for="message">Type your message below:</label><br>
-            <textarea name="message" placeholder="Hello Adarsh," id="message"></textarea><br>
+            <textarea name="message" id="message"></textarea><br>
             <input type="submit" value="Send Message">
         </form>
     </main>
