@@ -1,11 +1,195 @@
+@import "vars.css";
 @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', monospace, 'Times New Roman', serif;
     src: url(../assets/fonts/RobotoMono-VariableFont_wght.ttf);
 }
 
 * {
-    font-family: 'Roboto Mono';
-    font-weight: bold;
-    color: white;
-    background-color: #0c0633
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+strong, em {
+    color: var(--bold-text-color);
+    font-weight: bolder;
+}
+
+header {
+    display: flex;  
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+picture * {
+    width: 4dvw;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+#header_nav a{
+    padding: 0 0.5dvw 0;
+    text-decoration: none;
+}
+
+#header_nav {
+    margin-right: .5dvw;
+}
+
+#header_nav a:hover {
+    color: var(--bold-text-color);
+}
+
+main section {
+    padding: 2dvh 0 2dvh;
+    margin: 0 9dvw 0;
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+#external_links {    
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+}
+
+#external_links a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.563rem 3rem;
+    margin: 1rem 0;
+    background-color: var(--button-color);
+    border: 3px solid white;
+    width: 10rem;
+    border-radius: 1rem;
+}
+
+#external_links a:hover {
+    background-color: var(--bold-text-color);
+}
+
+#projects > h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#projects > h3 {
+    font-weight: 600;
+}
+
+#projects a:hover {
+    color: var(--bold-text-color);
+}
+
+aside {
+    width: 20%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px var(--bold-text-color);
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.back_to_top_button {
+    width: 9rem;
+    height: auto;
+    border: 3px solid white;
+    background-color: var(--button-color);
+    border-radius: 1rem;
+}
+
+.back_to_top_button:hover {
+    background-color: var(--bold-text-color);
+}
+
+#contact_me_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2dvh 0 2dvh;
+    margin: 0 9dvw 0;
+}
+
+#contact_me_form input, textarea {
+    background-color: var(--bold-text-color);
+    border: 3px solid white;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 2rem;
+}
+
+#contact_me_form textarea {
+    width: 20rem;
+    height: 20rem;
+}
+
+#contact_me_form button {
+    background-color: var(--button-color);
+    border: 3px solid white;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+
+#contact_me_form button:hover {
+    background-color: var(--bold-text-color)
+}
+
+#resume_button {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--button-color);
+    border: 3px solid white;
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+#resume_button:hover {
+    background-color: var(--bold-text-color);
+}
+
+#resume_details {
+    margin-top: 2rem;
+}
+
+#resume_details details {
+    border: 3px solid white;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+    width: 40dvw;
+}
+
+#education h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.relevant_courses_title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#education section {
+    margin-left: 0.5rem;
 }

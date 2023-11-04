@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Adarsh's Portfoilo</title>
     <link rel="icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./styles/main.css">
     <meta name="description" content="Adarsh Patel's resume and portfolio site.">
+    <title>Adarsh's Portfoilo</title>
 </head>
 <body>
     <header>
-        <img src="./assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
+        <picture>
+            <!--<source srcset="./assets/images/pfp.avif" type="image/avif">
+            <source srcset="./assets/images/pfp.webp" type="image/webp">-->
+            <img src="./assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
+        </picture>
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav>
-            <a href="./index.html">Home</a>
+        <nav id="header_nav">
+            <a href="#projects">Projects</a>
             <a href="./pages/contact.html">Contact</a>
-            <a href="./pages/experiment.html">Experimental</a>
             <a href="./pages/resume.html">Resume</a>
         </nav>
     </header>
     <main>
         <section id="welcome_section">
-            <h2><b>Welcome!</b></h2>
-            <p>
-                My name is Adarsh Patel and I am a computer sciece major at the University of
-                California, San Diego graduating in June 2024. I'm currently looking for new
-                graduate openings in any web development role. Scroll below to see my projects
-                or click on the three buttons below to redirect to more about me.
+            <h2><b style="font-size: 5rem; font-weight: 800;">Welcome!</b></h2>
+            <p style="font-size: 2.5rem">
+                My name is Adarsh Patel and I am a computer science major at the University of
+                California, San Diego graduating in June 2024. I am currently looking for new
+                graduate openings in any web development or computer graphics roles!
             </p>
         </section>
         <section id="external_links">
-            <h2>More About Me</h2>
-            <a href="https://www.linkedin.com/in/adarshpatel249/">LinkedIn</a>
-            <a href="https://github.com/adarsh249">GitHub</a>
-            <a href="./assets/documents/Adarsh_Patel_Resume.pdf">My Resume</a>
+            <h2 style="display:none">More About Me</h2>
+            <a href="https://www.linkedin.com/in/adarshpatel249/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/adarsh249" target="_blank">GitHub</a>
+            <a href="./assets/documents/Adarsh_Patel_Resume.pdf" target="_blank">My Resume</a>
         </section>
         <section id="projects">
             <h2>My Projects</h2>
@@ -73,11 +75,12 @@
                 <strong>Architectural Decision Records</strong> and the practices mentioned earlier. Throughout this period, we also created a robust <strong>CI/CD</strong> pipeline. Those documents can also be found in the <strong>GitHub</strong>. This pipeline
                 included a <strong>linter</strong>, the <strong>Code Climate</strong> quality checker, a manual <strong>pull request</strong> review, automated testing through <strong>Puppeteer</strong> and <strong>Jest</strong> as well as a <strong>JSDocs</strong> deployment.
             </p>
+            <hr>
         </section>
     </main>
     <footer>
-        <button class="back_to_top_button">Back to Top</button>
-        <p>Adarsh Patel &copy;</p>
+        <button class="back_to_top_button" onclick="location.href='#header_nav'">Back to Top</button>
+        <p>Adarsh Patel 2023 &copy;</p>
     </footer>
 </body>
 </html>

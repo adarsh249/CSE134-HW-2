@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Adarsh's Portfoilo</title>
     <link rel="icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
     <meta name="description" content="Adarsh Patel's resume and portfolio site.">
+    <title>Adarsh's Portfoilo</title>
 </head>
 <body>
     <header>
-        <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
+        <picture>
+            <!--<source srcset="./assets/images/pfp.avif" type="image/avif">
+            <source srcset="./assets/images/pfp.webp" type="image/webp">-->
+            <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
+        </picture>
         <h1>Adarsh Patel's Portfoilo</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./experiment.html">Experimental</a>
-            <a href="./resume.html">Resume</a>
+        <nav id="header_nav">
+            <a href="../index.html#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
         </nav>
     </header>
     <main>
-        <h2>Contact Me!</h2>
-        <form method="get" id="contact_me_form" action="https://httpbin.org/">
-            <label for="full_name">Enter your Name:</label><br>
+        <h2 style="font-weight:600; font-size:2.5rem;">Contact Me!</h2>
+        <form method="post" id="contact_me_form" action="https://httpbin.org/">
+            <label for="full_name">Full Name:</label><br>
             <input type="text" name="full_name" id="full_name" required autofocus><br>
+            <label for="email">Email: </label><br>
+            <input type="email" name="email" id="email" required><br>
             <label for="message">Type your message below:</label><br>
             <textarea name="message" id="message"></textarea><br>
-            <input type="submit" value="Send Message">
+            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>
