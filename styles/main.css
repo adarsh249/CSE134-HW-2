@@ -32,8 +32,10 @@ picture * {
 }
 
 #header_nav a{
-    padding: 0 0.5dvw 0;
+    padding: 0 0.6dvw 0;
     text-decoration: none;
+    border-radius: 1rem;
+    transition: background-color 0.5s ease-out;
 }
 
 #header_nav {
@@ -41,7 +43,7 @@ picture * {
 }
 
 #header_nav a:hover {
-    color: var(--bold-text-color);
+    background-color: var(--bold-text-color);
 }
 
 main section {
@@ -72,7 +74,8 @@ section p {
     background-color: var(--button-color);
     border: 3px solid white;
     width: 10rem;
-    border-radius: 1rem;
+    border-radius: 1rem;  
+    transition: background-color 0.5s ease-out;  
 }
 
 #external_links a:hover {
@@ -86,6 +89,10 @@ section p {
 
 #projects > h3 {
     font-weight: 600;
+}
+
+#projects a {
+    transition: color 0.5s ease-out;
 }
 
 #projects a:hover {
@@ -113,10 +120,13 @@ footer {
     border: 3px solid white;
     background-color: var(--button-color);
     border-radius: 1rem;
+    transition: background-color 0.5s ease-out;
+
 }
 
 .back_to_top_button:hover {
     background-color: var(--bold-text-color);
+    cursor: pointer;
 }
 
 #contact_me_form {
@@ -140,16 +150,23 @@ footer {
     height: 20rem;
 }
 
+#contact_me_form input:focus, textarea:focus {
+    background-color: aliceblue;
+    color: black;
+}
+
 #contact_me_form button {
     background-color: var(--button-color);
     border: 3px solid white;
     width: 10rem;
     height: 3rem;
     border-radius: 1rem;
+    transition: background-color 0.5s ease-out;
 }
 
 #contact_me_form button:hover {
-    background-color: var(--bold-text-color)
+    background-color: var(--bold-text-color);
+    cursor: pointer;
 }
 
 #resume_button {
@@ -161,15 +178,32 @@ footer {
     border: 3px solid white;
     width: 10rem;
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 0 1rem 1rem;
+    transition: background-color 0.5s ease-out;
 }
 
 #resume_button:hover {
     background-color: var(--bold-text-color);
+    cursor: pointer;
 }
 
 #resume_details {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#resume_details details > summary {
+    text-align: center;
+    list-style: none;
+}
+
+#resume_details details > summary::-webkit-details-marker {
+    list-style: none;
 }
 
 #resume_details details {
@@ -178,6 +212,15 @@ footer {
     padding: 1rem 0.5rem;
     margin: 1rem;
     width: 40dvw;
+}
+
+#resume_details summary:hover {
+    cursor: pointer;
+    background-color: var(--bold-text-color);
+}
+
+#resume_details summary {
+    transition: background-color 0.5s ease-out;
 }
 
 #education h3 {
@@ -192,4 +235,32 @@ footer {
 
 #education section {
     margin-left: 0.5rem;
+}
+
+#languages_frameworks_table, #devtools_table {
+    border-collapse: collapse;
+    border: 3px solid white;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#languages_frameworks_table td, #devtools_table td {
+    border: 3px solid white;
+    padding: 0.5rem;
+}
+
+#technical_skills {
+    align-items: center;
+}
+
+table caption {
+    margin: 1rem 0 0.3rem;
+    font-weight: 600;
+}
+
+#languages_frameworks_table th, #devtools_table th {
+    border: 3px solid white;
+    padding: 0.5rem;
+    font-weight: 500;
 }
