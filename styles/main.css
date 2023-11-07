@@ -7,12 +7,16 @@
 * {
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--text-color, white);
+    background-color: var(--background-color, black);
+}
+
+h1 {
+    font-weight: 900;
 }
 
 strong, em {
-    color: var(--bold-text-color);
+    color: var(--bold-text-color, thistle);
     font-weight: bolder;
 }
 
@@ -24,12 +28,17 @@ header {
     align-items: center;
 }
 
-picture * {
-    width: 4dvw;
-    height: auto;
-    border: 3px solid white;
+picture {
+    margin-left: 0.5rem;
+    border: 3px solid var(--border-color, white);
     border-radius: 100%;
+    overflow: hidden;
+    & source, & img{
+        height: 4rem;
+        width: auto;
+    }
 }
+
 
 #header_nav a{
     padding: 0 0.6dvw 0;
@@ -43,7 +52,7 @@ picture * {
 }
 
 #header_nav a:hover {
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
 }
 
 main section {
@@ -71,15 +80,15 @@ section p {
     font-size: 1.5rem;
     padding: 1.563rem 3rem;
     margin: 1rem 0;
-    background-color: var(--button-color);
-    border: 3px solid white;
+    background-color: var(--button-color, purple);
+    border: 3px solid var(--border-color, white);
     width: 10rem;
     border-radius: 1rem;  
     transition: background-color 0.5s ease-out;  
 }
 
 #external_links a:hover {
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
 }
 
 #projects > h2 {
@@ -96,7 +105,7 @@ section p {
 }
 
 #projects a:hover {
-    color: var(--bold-text-color);
+    color: var(--hover-color, thistle);
 }
 
 aside {
@@ -104,8 +113,7 @@ aside {
     padding-left: 0.5rem;
     margin-left: 0.5rem;
     float: right;
-    box-shadow: inset 5px 0 5px -5px var(--bold-text-color);
-    font-style: italic;
+    box-shadow: inset 5px 0 5px -5px var(--bold-text-color, thistle);
 }
 
 footer {
@@ -117,19 +125,19 @@ footer {
 .back_to_top_button {
     width: 9rem;
     height: auto;
-    border: 3px solid white;
-    background-color: var(--button-color);
+    border: 3px solid var(--border-color, white);
+    background-color: var(--button-color, purple);
     border-radius: 1rem;
     transition: background-color 0.5s ease-out;
 
 }
 
 .back_to_top_button:hover {
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
     cursor: pointer;
 }
 
-#contact_me_form {
+#contact_me, #contact_me_form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,8 +146,8 @@ footer {
 }
 
 #contact_me_form input, textarea {
-    background-color: var(--bold-text-color);
-    border: 3px solid white;
+    background-color: var(--hover-color, thistle);
+    border: 3px solid var(--border-color, white);
     border-radius: 1rem;
     width: 20rem;
     height: 2rem;
@@ -151,13 +159,13 @@ footer {
 }
 
 #contact_me_form input:focus, textarea:focus {
-    background-color: aliceblue;
-    color: black;
+    background-color: var(--focus-color, white);
+    color: var(--form-text-color, black);
 }
 
 #contact_me_form button {
-    background-color: var(--button-color);
-    border: 3px solid white;
+    background-color: var(--button-color, purple);
+    border: 3px solid var(--border-color, white);
     width: 10rem;
     height: 3rem;
     border-radius: 1rem;
@@ -165,7 +173,7 @@ footer {
 }
 
 #contact_me_form button:hover {
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
     cursor: pointer;
 }
 
@@ -174,16 +182,17 @@ footer {
     text-align: center;
     font-size: 1rem;
     padding: 1rem 2rem;
-    background-color: var(--button-color);
-    border: 3px solid white;
+    background-color: var(--button-color, purple);
+    border: 3px solid var(--border-color, white);
     width: 10rem;
     border-radius: 1rem;
     margin: 0 1rem 1rem;
+    max-width: 31%;
     transition: background-color 0.5s ease-out;
 }
 
 #resume_button:hover {
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
     cursor: pointer;
 }
 
@@ -207,19 +216,41 @@ footer {
 }
 
 #resume_details details {
-    border: 3px solid white;
+    border: 3px solid var(--border-color, white);
     border-radius: 1rem;
     padding: 1rem 0.5rem;
     margin: 1rem;
-    width: 40dvw;
+    width: 60dvw;
+    max-width: 40%;
+    background-color: var(--button-color, purple);
+    transition: background-color 0.5s ease-out;
 }
 
 #resume_details summary:hover {
     cursor: pointer;
-    background-color: var(--bold-text-color);
+    background-color: var(--hover-color, thistle);
+}
+
+#resume_details details:hover summary {
+    background-color: var(--hover-color, thistle);
+}
+
+#resume_details details:hover:not([open]) {
+    background-color: var(--hover-color, thistle); 
+}
+
+#resume_details details[open] {
+    background-color: var(--background-color), black;
+    transition: none;
+}
+
+#resume_details details[open] summary {
+    background-color: var(--background-color, black);
+    transition: none;
 }
 
 #resume_details summary {
+    background-color: var(--button-color, purple);
     transition: background-color 0.5s ease-out;
 }
 
@@ -239,14 +270,14 @@ footer {
 
 #languages_frameworks_table, #devtools_table {
     border-collapse: collapse;
-    border: 3px solid white;
+    border: 3px solid var(--border-color, white);
     text-align: center;
     width: 70%;
     margin: 0 auto;
 }
 
 #languages_frameworks_table td, #devtools_table td {
-    border: 3px solid white;
+    border: 3px solid var(--border-color, white);
     padding: 0.5rem;
 }
 
@@ -260,7 +291,27 @@ table caption {
 }
 
 #languages_frameworks_table th, #devtools_table th {
-    border: 3px solid white;
+    border: 3px solid var(--border-color, white);
     padding: 0.5rem;
     font-weight: 500;
+}
+
+@media (max-width: 850px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 50%;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
+        float: right;
+        box-shadow: inset 5px 0 5px -5px var(--bold-text-color, thistle);
+    }
+
+    #resume_details details {
+        max-width: 70%;
+    }
+
 }
