@@ -242,7 +242,7 @@ footer {
     transition: background-color 0.5s ease-out;
 }
 
-#resume_details details > summary::-webkit-details-marker, #resume_details details >summary::marker {
+#resume_details details > summary::-webkit-details-marker, #resume_details details > summary::marker {
     display: none;
 }
 
