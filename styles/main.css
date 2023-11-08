@@ -243,8 +243,7 @@ footer {
 }
 
 #resume_details details > summary::-webkit-details-marker, #resume_details details >summary::marker {
-    color: red;
-    list-style: none;
+    display: none;
 }
 
 #resume_details details {
