@@ -7,13 +7,4 @@
     --border-color: #FFFFFF;
     --focus-color: #FFFFFF;
     --form-text-color: color-mix(in hsl longer hue, rgb(140, 255, 0) 30%, mintcream);
-    --step--2: clamp(0.96rem, 1.0658rem + -0.1365vw, 1.0419rem);
-    --step--1: clamp(1.2rem, 1.2646rem + -0.0833vw, 1.25rem);
-    --step-0: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
-    --step-1: clamp(1.8rem, 1.7781rem + 0.125vw, 1.875rem);
-    --step-2: clamp(2.16rem, 2.1064rem + 0.3062vw, 2.3438rem);
-    --step-3: clamp(2.5919rem, 2.4933rem + 0.5635vw, 2.93rem);
-    --step-4: clamp(3.1106rem, 2.9498rem + 0.9188vw, 3.6619rem);
-    --step-5: clamp(3.7325rem, 3.486rem + 1.4083vw, 4.5775rem);
-    --step-6: clamp(4.4788rem, 4.1162rem + 2.0719vw, 5.7219rem);
 }

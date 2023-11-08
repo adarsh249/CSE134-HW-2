@@ -13,7 +13,7 @@
             <source srcset="../assets/images/pfp.webp" type="image/webp">
             <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
         </picture>
-        <h1>Adarsh Patel's Portfoilo</h1>
+        <h1><a href="../index.html">Adarsh Patel's Portfoilo</a></h1>
         <nav id="header_nav">
             <a href="../index.html#projects">Projects</a>
             <a href="contact.html">Contact</a>
@@ -21,8 +21,8 @@
         </nav>
     </header>
     <main id="contact_me">
-        <h2 style="font-weight:600; font-size:2.5rem;">Contact Me!</h2>
-        <form method="post" id="contact_me_form" action="https://httpbin.org/">
+        <h2>Contact Me!</h2>
+        <form method="post" id="contact_me_form" action="https://httpbin.org/post">
             <label for="full_name">Full Name:</label><br>
             <input type="text" name="full_name" id="full_name" required autofocus><br>
             <label for="email">Email: </label><br>
@@ -33,7 +33,7 @@
         </form>
     </main>
     <footer>
-        <button class="back_to_top_button">Back to Top</button>
+        <button class="back_to_top_button" onclick="location.href='#'">Back to Top</button>
         <p>Adarsh Patel &copy;</p>
     </footer>
 </body>
