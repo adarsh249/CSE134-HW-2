@@ -243,7 +243,7 @@ footer {
 }
 
 #resume_details details > summary::-webkit-details-marker, #resume_details details >summary::marker {
-    list-style-type: none;
+    list-style: none;
 }
 
 #resume_details details {
