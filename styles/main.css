@@ -341,14 +341,16 @@ table caption {
 }
 
 /* Styles for mobile devices/tablets */
-@media (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
     header {
         display: flex;
         flex-direction: column;
     }
+
     h1 {
         text-align: center;
     }
+
     aside {
         font-size: 2rem;
         width: 50%;
@@ -360,7 +362,7 @@ table caption {
 
     picture {
         margin: 0;
-        & source, & img{
+        & source, & img {
             height: 10rem;
             width: auto;
         }
@@ -425,12 +427,6 @@ table caption {
         min-width: 80dvw;
     }
 }
-
-/* Landscape Tablets and Desktop/Laptop 
-@media only screen and (min-width: 992px){ 
-
-}
-*/
 @keyframes slideDown {
     from {
         max-height: 0;
