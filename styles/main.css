@@ -113,20 +113,20 @@ section p {
 }
 
 /* Styles for project elements */
-#projects > h2 {
+#projects_home > h2 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-#projects > h3 {
+#projects_home h3 {
     font-weight: 600;
 }
 
-#projects a {
+#projects_home a {
     transition: color 0.5s ease-out;
 }
 
-#projects a:hover {
+#projects_home a:hover {
     color: var(--hover-color, thistle);
 }
 
@@ -244,6 +244,10 @@ footer {
 
 #resume_details details > summary::-webkit-details-marker {
     list-style: none;
+}
+
+*::-webkit-details-marker {
+    list-style-type: none !important;
 }
 
 #resume_details details {
@@ -443,6 +447,15 @@ table caption {
 
     #resume_details details {
         min-width: 60%;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 1024px) and (hover:none) and (orientation: landscape) {
+    picture {
+        margin: 0;
+        & source, & img {
+            height: 6rem;
+            width: auto;
+        }
     }
 }
 
