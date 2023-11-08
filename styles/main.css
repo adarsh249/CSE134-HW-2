@@ -237,7 +237,6 @@ footer {
     padding: 1rem;
     border-radius: 1rem;
     background-color: var(--button-color, purple);
-    overflow: none;
     transition: background-color 0.5s ease-out;
 }
 
@@ -266,7 +265,7 @@ footer {
 }
 
 #resume_details details[open] {
-    background-color: var(--background-color), black;
+    background-color: var(--background-color, black);
     transition: none;
 }
 
