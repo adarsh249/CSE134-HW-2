@@ -56,6 +56,8 @@ picture {
     & source, & img{
         height: 5rem;
         width: auto;
+        animation: rotate 1s ease-in-out infinite;
+        transform-origin: center;
     }
 }
 
@@ -119,6 +121,7 @@ section p {
 }
 
 #projects_home h3 {
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -309,6 +312,10 @@ footer {
     margin: 1rem;
 }
 
+#projects > h3 {
+    font-weight: 600;
+}
+
 #technical_skills {
     display: block;
     justify-content: center;
@@ -341,6 +348,7 @@ table caption {
 }
 
 /* Styles for mobile devices/tablets */
+/* For phones and tablets */
 @media only screen and (min-width: 280px) and (max-width: 1024px) and (hover:none) {
     header {
         display: flex;
@@ -428,6 +436,7 @@ table caption {
     }
 }
 
+/* For desktop, screen resizing styles. */
 @media (max-width: 850px) {
     header {
         display: flex;
@@ -445,6 +454,7 @@ table caption {
         min-width: 60%;
     }
 }
+/* Styles for landscape tablets */
 @media only screen and (min-width: 280px) and (max-width: 1024px) and (hover:none) and (orientation: landscape) {
     picture {
         margin: 0;
@@ -455,37 +465,16 @@ table caption {
     }
 }
 
-@keyframes slideDown {
-    from {
-        max-height: 0;
+@keyframes rotate {
+    0% {
+        transform: rotate(-5deg);
     }
-
-    to {
-        max-height: 1500px;
+    50% {
+        transform: rotate(5deg);
     }
-}
-
-@keyframes slideUp {
-    from {
-        max-height: 100%;
-    }
-
-    to {
-        max-height: 0;
+    100% {
+        transform: rotate(-5deg);
     }
 }
 
-    /* 
-    animate max height property
-    give dropdown content a transitoin
-    apply animation property to inner content 
-    @keyframes slideDown {
-  from { max-height: 0%; }
-  to { max-height: 100%; }
-}
-    */
-
-
-/* add media print */
-/* add media for phone */
 /* add CSS animation */
