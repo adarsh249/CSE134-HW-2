@@ -495,17 +495,9 @@ table caption {
     picture {
         margin: 0;
         & source, & img {
-            height: 6rem;
+            height: 4rem;
             width: auto;
         }
-    }
-
-    h1 > a {
-        font-size: 1.5rem;
-    }
-
-    #header_nav a{
-        font-size: 1.3rem;
     }
 }
 
