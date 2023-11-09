@@ -498,6 +498,10 @@ table caption {
             height: 6rem;
             width: auto;
         }
+
+        header {
+            min-width: 1009px;
+        }
     }
 }
 
