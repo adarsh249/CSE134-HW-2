@@ -499,6 +499,14 @@ table caption {
             width: auto;
         }
     }
+
+    h1 > a {
+        font-size: 1.5rem;
+    }
+
+    #header_nav a{
+        font-size: 1.3rem;
+    }
 }
 
 @keyframes rotate {
