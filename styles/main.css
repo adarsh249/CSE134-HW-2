@@ -455,6 +455,12 @@ table caption {
         font-size: 2rem;
         min-width: 80dvw;
     }
+
+    table caption {
+        margin: 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
 }
 
 /* For desktop, screen resizing styles. */
