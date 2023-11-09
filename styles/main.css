@@ -29,7 +29,7 @@ h2 {
     font-weight: 600; font-size: 2.5rem;
 }
 
-#external_links:has(h2) {
+#external_links h2:has(+ a) {
     display: none;
 }
 
@@ -114,7 +114,7 @@ section p {
     background-color: var(--hover-color, thistle);
 }
 
-/* Styles for project elements */
+/* Styles for project elements in index.html*/
 #projects_home > h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -280,14 +280,13 @@ footer {
 }
 
 /* Styling elements within each detail */
-#education h3 {
+
+:is(#education, #relevant_courses, #experience, #projects) h3 {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .relevant_courses_title {
-    font-weight: 600;
-    font-size: 1.5rem;
     margin: 1rem;
 }
 
@@ -300,10 +299,6 @@ footer {
     margin: 1rem;
 }
 
-#experience > h3 {
-    font-weight: 600;
-}
-
 #experience *:not(summary, li) {
     margin: 1rem;
 }
@@ -312,8 +307,12 @@ footer {
     margin: 1rem;
 }
 
-#projects > h3 {
-    font-weight: 600;
+#projects a {
+    transition: color 0.5s ease-in;
+}
+#projects a:hover {
+    color: var(--hover-color, thistle);
+    transition: color 0.5s ease-out;
 }
 
 #technical_skills {
@@ -476,5 +475,3 @@ table caption {
         transform: rotate(-5deg);
     }
 }
-
-/* add CSS animation */
