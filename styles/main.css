@@ -499,10 +499,12 @@ table caption {
             width: auto;
         }
 
-        header {
-            min-width: 1009px;
+        h1 > a {
+            font-weight: 500;
         }
     }
+
+    
 }
 
 @keyframes rotate {
