@@ -498,13 +498,7 @@ table caption {
             height: 6rem;
             width: auto;
         }
-
-        h1 > a {
-            font-weight: 500;
-        }
     }
-
-    
 }
 
 @keyframes rotate {
