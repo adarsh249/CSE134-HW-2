@@ -461,6 +461,15 @@ table caption {
         font-size: 2rem;
         font-weight: 700;
     }
+
+    :is(#education, #relevant_courses, #experience, #projects) h3 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    #projects a {
+        font-weight: 700;
+        font-size: 2rem;
+    }
 }
 
 /* For desktop, screen resizing styles. */
