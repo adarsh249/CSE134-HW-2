@@ -3,13 +3,13 @@
 
 /* Fonts with its fallbacks */
 @font-face {
-    font-family: 'Roboto Mono', monospace, 'Times New Roman', serif;
+    font-family: 'Roboto Mono', monospace;
     src: url(../assets/fonts/RobotoMono-VariableFont_wght.ttf);
 }
 
 /* Basic CSS for Every Page*/
 * {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace, 'Times New Roman', serif;
     font-weight: 500;
     color: var(--text-color, lightgray);
     background-color: var(--background-color, black);
