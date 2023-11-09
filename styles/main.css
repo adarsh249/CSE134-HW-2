@@ -491,11 +491,11 @@ table caption {
     }
 }
 /* Styles for landscape tablets */
-@media only screen and (min-width: 280px) and (max-width: 1024px) and (hover:none) and (orientation: landscape) {
+@media only screen and (min-width: 280px) and (max-width: 1025px) and (hover:none) and (orientation: landscape) {
     picture {
         margin: 0;
         & source, & img {
-            height: 4rem;
+            height: 6rem;
             width: auto;
         }
     }
