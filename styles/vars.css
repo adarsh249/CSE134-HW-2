@@ -6,5 +6,5 @@
     --hover-color: color(display-p3 0.67 0.63 0.94);
     --border-color: #FFFFFF;
     --focus-color: #FFFFFF;
-    --form-text-color: color-mix(in hsl longer hue, rgb(140, 255, 0) 30%, mintcream);
+    --error-color: rgb(255, 77, 77);
 }

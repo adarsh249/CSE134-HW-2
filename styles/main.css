@@ -192,7 +192,7 @@ footer {
     margin: 0 9dvw 0;
 }
 
-#contact_me_form input, textarea {
+#contact_me_form input, #contact_me_form textarea {
     background-color: var(--hover-color, thistle);
     border: 3px solid var(--border-color, white);
     border-radius: 1rem;
@@ -201,12 +201,14 @@ footer {
 }
 
 #contact_me_form textarea {
-    height: 20rem;
+    height: 20rem; 
+    resize: none;
 }
 
-#contact_me_form input:focus, textarea:focus {
+#contact_me_form input:focus, #contact_me_form textarea:focus {
     background-color: var(--focus-color, white);
-    color: var(--form-text-color, black);
+    color: var(--hover-color, black);
+    z-index: 10;
 }
 
 #contact_me_form button {
@@ -222,6 +224,24 @@ footer {
     background-color: var(--hover-color, thistle);
     cursor: pointer;
 }
+
+/* Form Error Messages */
+#contact_me_form input:user-invalid, #contact_me_form textarea:user-invalid {
+    border-color: var(--error-color, red);
+}
+
+.error_message {
+    color: var(--error-color, red);
+    font-size: 0.7rem;
+    padding: 0;
+    display: none;
+}
+
+output[name="error_message"] {
+    color: var(--error-color, red);
+    font-size: 0.7rem;
+}
+
 
 /* Styles related to the PDF Resume button */
 #resume_button {
@@ -512,3 +532,4 @@ table caption {
         transform: rotate(-5deg);
     }
 }
+
