@@ -7,4 +7,17 @@
     --border-color: #FFFFFF;
     --focus-color: #FFFFFF;
     --error-color: rgb(255, 77, 77);
+    --info-color: rgb(109 223 78);
+    --sun-moon-color: #fff000;
+}
+
+[data-theme="dark"] {
+    --text-color: color(display-p3 0.05 0.02 0.20);
+    --background-color: #ffffffbc;
+    --border-color: black;
+    --button-color: lightgray;
+    --bold-text-color: black;
+    --focus-color: gray;
+    --hover-color: lightblue;
+    
 }

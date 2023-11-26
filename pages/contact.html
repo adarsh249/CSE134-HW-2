@@ -4,10 +4,15 @@
     <link rel="icon" href="../assets/favicon.ico">
     <link rel="stylesheet" href="../styles/main.css">
     <meta name="description" content="Adarsh Patel's resume and portfolio site.">
+    <script type="module" src="../scripts/theme.js"></script>
     <script type="module" src="../scripts/form.js"></script>
     <title>Adarsh's Portfoilo</title>
 </head>
 <body>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
     <header>
         <picture>
             <source srcset="../assets/images/pfp.avif" type="image/avif">
@@ -25,7 +30,7 @@
         <h2>Contact Me!</h2>
         <form method="post" id="contact_me_form" action="https://httpbin.org/post">
             <label for="full_name">Full Name:</label><br>
-            <input type="text" name="full_name" id="full_name" minlength="1" required autofocus>
+            <input type="text" name="full_name" id="full_name" minlength="1" required autofocus >
             
             <output for="full_name" name="error_message"></output>
             <output for="full_name" name="info_message">
@@ -67,7 +72,7 @@
             <br>
 
             <input type="hidden" name="possible_bot" value="true">
-
+            <input type="hidden" name="form-errors" id="form_errors">
             <button type="submit">Submit</button>
         </form>
     </main>
