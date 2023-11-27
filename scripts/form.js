@@ -1,5 +1,3 @@
-/*might need to add different patterns for fullName, email, comments*/
-/*Need to fix form errors submission. its not in json FORMAT */
 const contactForm = document.getElementById('contact_me_form');
 const nameInput = document.getElementById('full_name');
 const emailInput = document.getElementById('email');
@@ -61,9 +59,9 @@ function validatePhone() {
         phoneInput.setCustomValidity('Please type the input as xxx-xxx-xxxx');
         phoneInputError.textContent = phoneInput.validationMessage;
         let errorData = {
-            inputName: 'phone',
-            errorType: 'Pattern mistmatch',
-            errorMessage: 'Please type the input as xxx-xxx-xxxx.'
+            'inputName': 'phone',
+            'errorType': 'Pattern mistmatch',
+            'errorMessage': 'Please type the input as xxx-xxx-xxxx.'
         };
         formErrors.push(errorData);
     }
@@ -81,10 +79,11 @@ function validatePhone() {
 }
 
 function validateComments() {
-    if(commentInput.validity.patternMismatch){
+    if(/[^a-zA-Z0-9.,!?&quot;'()\s]+/.test(commentInput.value)){
         showRegExError(commentInput, commentInputError);
+        commentInput.setCustomValidity('Invalid character(s) entered.');
     }
-    if(commentInput.validity.tooShort) {
+    else if(commentInput.validity.tooShort) {
         commentInput.setCustomValidity('You must have at least 50 characters.');
         commentInputError.textContent = commentInput.validationMessage;        
     }
@@ -92,9 +91,9 @@ function validateComments() {
         commentInput.setCustomValidity('You must have less than 1500 characters.');
         commentInputError.textContent = commentInput.validationMessage;
         let errorData = {
-            inputName: 'comments',
-            errorType: 'tooLong',
-            errorMessage: 'You must have less than 1500 characters.'
+            'inputName': 'comments',
+            'errorType': 'tooLong',
+            'errorMessage': 'You must have less than 1500 characters.'
         };
         formErrors.push(errorData);
     }
@@ -110,7 +109,14 @@ function validateComments() {
 }
 
 function showRegExError(input, inputError) {
-    let originalColor = input.style.backgroundColor;
+    let theme = localStorage.getItem('data-theme');
+    let originalColor;
+    if(theme == 'light') {
+        originalColor = 'lightgray';
+    }
+    else {
+        originalColor = 'color(display-p3 0.67 0.63 0.94)';
+    }
     input.style.backgroundColor = 'rgb(255, 77, 77)';
     inputError.textContent = 'Invalid character entered.';
     setTimeout(function () {
@@ -121,9 +127,9 @@ function showRegExError(input, inputError) {
     }, 500);
 
     let errorData = {
-        "inputName": inputNames[input.id],
-        "errorType": "RegEx Validation Error",
-        "errorMessage": "Invalid character entered."
+        'inputName': inputNames[input.id],
+        'errorType': 'RegEx Validation Error',
+        'errorMessage': 'Invalid character entered.'
     };
 
     formErrors.push(errorData);
@@ -152,18 +158,18 @@ function characterCount() {
 function sendData() {
     if(commentInput.validity.tooShort) {
         let errorData = {
-            "inputName": "comments",
-            "errorType": "tooShort",
-            "errorMessage": "You must have at least 50 characters."
+            'inputName': 'comments',
+            'errorType': 'tooShort',
+            'errorMessage': 'You must have at least 50 characters.'
         };
         formErrors.push(errorData);
         
     }
     if(commentInput.validity.tooLong) {
         let errorData = {
-            "inputName": "comments",
-            "errorType": "tooLong",
-            "errorMessage": "You must have less than 1500 characters."
+            'inputName': 'comments',
+            'errorType': 'tooLong',
+            'errorMessage': 'You must have less than 1500 characters.'
         };
         formErrors.push(errorData);
     }

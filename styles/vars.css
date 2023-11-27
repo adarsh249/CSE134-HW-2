@@ -3,6 +3,8 @@
     --text-color: #FFFFFF;
     --bold-text-color: color(display-p3 0.67 0.63 0.94);
     --button-color: color(display-p3 0.34 0.29 0.70);
+    --input-color: color(display-p3 0.67 0.63 0.94);
+    --input-text-color: color(display-p3 0.05 0.02 0.20);
     --hover-color: color(display-p3 0.67 0.63 0.94);
     --border-color: #FFFFFF;
     --focus-color: #FFFFFF;
@@ -11,13 +13,14 @@
     --sun-moon-color: #fff000;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
     --text-color: color(display-p3 0.05 0.02 0.20);
     --background-color: #ffffffbc;
     --border-color: black;
     --button-color: lightgray;
     --bold-text-color: black;
-    --focus-color: gray;
+    --focus-color: white;
     --hover-color: lightblue;
-    
+    --input-color: lightgray;   
+    --input-text-color: black;
 }

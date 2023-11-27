@@ -53,7 +53,7 @@
             <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 
             <output for="phone" name="error_message">
-                <span class="error_message">Phone numbers are in the format 000-000-0000.</span>
+                <span class="error_message">Phone numbers are in the format xxx-xxx-xxxx.</span>
             </output>
             <output for="phone" name="info_message">
                 <span class="info_message"></span>
@@ -61,7 +61,7 @@
             <br>
 
             <label for="comments">Type your message below:</label><br>
-            <textarea name="comments" id="comments" maxlength="1500" minlength="50" required pattern="[a-zA-Z0-9.,!?&quot;'()\s]+"></textarea>
+            <textarea name="comments" id="comments" maxlength="1500" minlength="50" required></textarea>
 
             <output for="comments" name="error_message">
                 <span class="error_message">You must have between 50 and 1500 characters. No invalid characters allowed.</span>
