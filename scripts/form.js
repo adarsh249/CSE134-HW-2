@@ -109,7 +109,7 @@ function validateComments() {
 }
 
 function showRegExError(input, inputError) {
-    let theme = localStorage.getItem('data-theme');
+    let theme = localStorage.getItem('theme');
     let originalColor;
     if(theme == 'light') {
         originalColor = 'lightgray';
