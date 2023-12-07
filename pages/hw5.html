@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="description" content="Adarsh Patel's resume and portfolio site.">
+    <script type="module" src="../scripts/theme.js"></script>
+    <script type="module" src="../scripts/rating.js"></script>
+    <noscript>
+        <style>
+            .switch {
+                display: none;
+            }
+        </style>
+    </noscript>
+    <title>Adarsh's Portfoilo</title>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+    <header>
+        <picture>
+            <source srcset="../assets/images/pfp.avif" type="image/avif">
+            <source srcset="../assets/images/pfp.webp" type="image/webp">
+            <img src="../assets/images/pfp.jpg" alt="A profile picture of Adarsh Patel">
+        </picture>
+        <h1><a href="#">Adarsh Patel's Portfoilo</a></h1>
+        <nav id="header_nav">
+            <a href="../index.html#projects_home">Projects</a>
+            <a href="./pages/contact.html">Contact</a>
+            <a href="./pages/resume.html">About Me</a>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <h1>Rating Widget</h1>
+        <rating-widget max="5">
+            <form action="https://httpbin.org/post" method="POST">
+                <label for="rating">How satisfied are you?</label>
+                <input type="hidden" name="question" value="How staisfied are you?"><br>
+                <input type="hidden" name="sentBy" value="HTML">
+                <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+                <button type="submit">Submit</button>
+            </form>
+        </rating-widget>
+    </main>
+<body>
+</html>
