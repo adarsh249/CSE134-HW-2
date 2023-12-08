@@ -37,7 +37,7 @@ class RatingWidget extends HTMLElement {
                     padding: 0.2rem;
                 }
 
-                .star:hover, .star:hover ~ .star{
+                .star:hover {
                     color: white;
                     cursor: pointer;
                 }
@@ -48,10 +48,48 @@ class RatingWidget extends HTMLElement {
                 <input type="hidden" name="sentBy" value="HTML">
                 <div class="stars">${stars}</div>
             </div>`; 
+        const starElements = this.shadowRoot.querySelectorAll('.star');
+        starElements.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                this.rating = index + 1;
+                this.sendRequest();
+                this.displaySubmissionMessage();
+            });
+        });
     }
 
     connectedCallback() {
         this.render();
+    }
+
+    displaySubmissionMessage() {
+        let message = '';
+        if(this.rating / this.max >= 0.8){
+            message = `Thank you for the ${this.rating} star rating!!`;
+        }
+        else {
+            message = `Thank you for your feedback of ${this.rating} stars. We'll try to do better!`
+        }
+        this.shadowRoot.innerHTML = `
+                <output>${message}</output>
+            `;
+    }
+
+    sendRequest() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://httpbin.org/post", true);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200){
+                let parsedResponse = JSON.parse(xhr.responseText);
+                console.log(parsedResponse);
+            }
+        };
+        xhr.setRequestHeader('X-Sent-By', 'JavaScript');
+        let formData = new FormData();
+        formData.append('rating', this.rating);
+        formData.append('question', 'How satisfied are you?');
+        formData.append('sentBy', 'JS');
+        xhr.send(formData);
     }
 
 }
