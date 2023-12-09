@@ -6,6 +6,7 @@
     <meta name="description" content="Adarsh Patel's resume and portfolio site.">
     <script type="module" src="../scripts/theme.js"></script>
     <script type="module" src="../scripts/rating.js"></script>
+    <script type="module" src="../scripts/weather.js"></script>
     <noscript>
         <style>
             .switch {
@@ -35,7 +36,7 @@
     </header>
     <main>
         <br>
-        <h1>Rating Widget</h1>
+        <h2>Rating Widget</h2>
         <rating-widget max="5">
             <form action="https://httpbin.org/post" method="POST">
                 <label for="rating">How satisfied are you?</label>
@@ -45,6 +46,9 @@
                 <button type="submit">Submit</button>
             </form>
         </rating-widget>
+
+        <h2>Current Weather</h2>
+        <weather-widget>Current Weather Conditions Unavailable!</weather-widget>
     </main>
 <body>
 </html>
