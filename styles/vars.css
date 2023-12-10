@@ -11,6 +11,8 @@
     --error-color: rgb(255, 77, 77);
     --info-color: rgb(109 223 78);
     --sun-moon-color: #fff000;
+    --star-color: gray;
+    --hover-star-color: white;
 }
 
 [data-theme="light"] {
@@ -23,4 +25,5 @@
     --hover-color: lightblue;
     --input-color: lightgray;   
     --input-text-color: black;
+    --hover-star-color: black;
 }
