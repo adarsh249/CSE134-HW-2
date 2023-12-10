@@ -93,7 +93,7 @@ class WeatherWidget extends HTMLElement{
                         }
                         p, #icon {
                             padding: 0 0.5rem 0.5rem 0rem;
-                            color: var(--text-color, white);;
+                            color: var(--text-color, white);
                         }
                     </style>
                     <div>${svgContent} <p>${shortForecast} ${temperature.toString()}&deg;${temperatureUnit}</p></div>
