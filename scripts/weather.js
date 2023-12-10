@@ -33,7 +33,6 @@ class WeatherWidget extends HTMLElement{
             })
             .then(data => {
                 this.forecastEndPoint = data.properties.forecast;
-                console.log(this.forecastEndPoint);
                 this.getForecast(this.forecastEndPoint);
             })
             .catch(error => console.error('Error fetching weather data...', error));
