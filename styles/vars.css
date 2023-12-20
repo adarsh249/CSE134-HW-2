@@ -1,8 +1,8 @@
 :root {
-    --background-color: color(display-p3 0.05 0.02 0.20);
+    --background-color: #000000;
     --text-color: #FFFFFF;
-    --bold-text-color: color(display-p3 0.67 0.63 0.94);
-    --button-color: color(display-p3 0.34 0.29 0.70);
+    --bold-text-color: rgb(144, 67, 191);
+    --button-color: rgb(144, 67, 191);
     --input-color: color(display-p3 0.67 0.63 0.94);
     --input-text-color: color(display-p3 0.05 0.02 0.20);
     --hover-color: color(display-p3 0.67 0.63 0.94);
