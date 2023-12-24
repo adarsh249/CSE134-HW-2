@@ -173,7 +173,6 @@ function sendData() {
         };
         formErrors.push(errorData);
     }
-    console.log(formErrors);
     let formErrorsJSON = JSON.stringify(formErrors);
     let formErrorsValue = document.getElementById('form_errors');
     formErrorsValue.value = formErrorsJSON;
