@@ -154,7 +154,7 @@ function characterCount() {
         commentInputInfo.style.color = 'rgb(109 223 78)';
     }
 }
-
+/*
 function sendData() {
     if(commentInput.validity.tooShort) {
         let errorData = {
@@ -177,10 +177,17 @@ function sendData() {
     let formErrorsValue = document.getElementById('form_errors');
     formErrorsValue.value = formErrorsJSON;
 }
+*/
+
+function formRedirect(event) {
+    event.preventDefault();
+    contactForm.innerHTML = `Thanks ${nameInput.value}! Your form has been submitted!`;
+}
 
 nameInput.addEventListener('input', validateFullName);
 emailInput.addEventListener('input', validateEmail);
 phoneInput.addEventListener('input', validatePhone);
 commentInput.addEventListener('input', validateComments);
 commentInput.addEventListener('input', characterCount);
-submitButton.addEventListener('click', sendData);
+contactForm.addEventListener('submit', formRedirect);
+//submitButton.addEventListener('click', sendData);
