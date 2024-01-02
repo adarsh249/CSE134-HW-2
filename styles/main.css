@@ -159,6 +159,10 @@ aside {
     box-shadow: inset 5px 0 5px -5px var(--bold-text-color, thistle);
 }
 
+project-item {
+    display: block;
+}
+
 /* Styles related to the footer */
 footer {
     display: flex;
