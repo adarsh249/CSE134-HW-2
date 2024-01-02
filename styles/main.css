@@ -375,6 +375,11 @@ output[name="info_message"] {
     align-items: center;
 }
 
+resume-course b {
+    font-weight: 500;
+    color: var(--bold-text-color, purple);
+}
+
 /* Styling the tables in technical skills */
 #languages_frameworks_table, #devtools_table {
     border-collapse: collapse;
