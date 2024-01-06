@@ -141,14 +141,19 @@ section p {
     font-weight: 700;
 }
 
-#projects_home a {
+#projects_home a, #projects_home span {
     font-size: 1.5rem;
     font-weight: 700;
     transition: color 0.5s ease-out;
 }
 
-#projects_home a:hover {
+#projects_home a:hover, #projects_home span:hover {
     color: var(--hover-color, thistle);
+}
+
+#projects_home span {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 aside {
