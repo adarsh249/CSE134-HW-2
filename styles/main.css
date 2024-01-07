@@ -425,6 +425,7 @@ table caption {
     right: 0;
     margin-right: .5dvw;
     float: right;
+    z-index: 100;
 }
   
 .switch input {
@@ -616,3 +617,51 @@ input:checked + .slider:before {
     }
 }
 
+/* CSS for use of Transition API */
+
+/* No transitions for motion sickness users */
+@media not (prefers-reduced-motion: reduce) {
+    header {
+        view-transition-name: main-content;
+    }
+
+    .switch {
+        view-transition-name: theme-switch;
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: left center;
+}
+
+::view-transition-old(root) {
+    animation: 0.25s linear both move-out;
+}
+  
+::view-transition-new(root) {
+    animation: 0.25s linear both move-in;
+}
+
+@keyframes move-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+  
+@keyframes move-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+}
