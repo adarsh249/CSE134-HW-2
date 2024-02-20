@@ -419,7 +419,7 @@ table caption {
 /* Inspiration from https://uiverse.io/alexruix/splendid-liger-23*/
 /* The switch - the box around the slider */
 .switch {
-    position: absolute;
+    position: fixed;
     width: 2.7em;
     height: 1.7em;
     right: 0;
